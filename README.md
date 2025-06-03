@@ -31,3 +31,35 @@
 ---
 
 🔗 자세한 설명은 `week1_titanic_eda.py` 주석 참고
+
+
+---
+# 🛳 4주차: Titanic - 생존자 예측 프로젝트
+
+타이타닉호 생존 여부를 예측하는 머신러닝 프로젝트입니다.  
+EDA → 전처리 → 모델 선택 → 캐글 제출까지의 전체 파이프라인을 구현했습니다.
+
+---
+
+## 📁 데이터셋
+
+- `train.csv`: 훈련 데이터 (정답 포함)
+- `test.csv`: 테스트 데이터 (예측 대상)
+- 출처: [Kaggle Titanic Competition](https://www.kaggle.com/competitions/titanic)
+
+---
+
+## 🧠 모델 선택 요약
+
+실험한 모델 목록:
+
+- 로지스틱 회귀 (Logistic Regression)
+- 랜덤 포레스트 (Random Forest)
+- XGBoost
+
+XGBoost는 교차검증 정확도는 가장 높았지만 (≈ 0.82),  
+캐글 테스트셋 점수는 오히려 낮게 나왔습니다 (0.70095).  
+반면 **Random Forest는 더 안정적인 일반화 성능을 보여**,  
+최종 점수 **0.75837**로 가장 높게 나왔습니다.  
+→ 따라서 최종 제출 모델로 Random Forest를 선택했습니다.
+
